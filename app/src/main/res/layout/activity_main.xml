@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/btn_move_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Move Activity" />
+
+        <EditText
+            android:id="@+id/edt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama" />
+
+        <EditText
+            android:id="@+id/edt_umur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Umur"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_data_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Activity" />
+
+        <EditText
+            android:id="@+id/edt_merek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="merek" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kondisi" />
+
+            <RadioButton
+                android:id="@+id/rb_baru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baru" />
+
+            <RadioButton
+                android:id="@+id/rb_bekas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bekas" />
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tahun"
+            android:id="@+id/edt_tahun"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="bahan bakar"
+            android:id="@+id/edt_bahan_bakar"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Plat nomor"
+            android:id="@+id/edt_plat_nomor"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Object Activity"
+            android:id="@+id/btn_object_activity"/>
+
+    </LinearLayout>
+
+</ScrollView>
