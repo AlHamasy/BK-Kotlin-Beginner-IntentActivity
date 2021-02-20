@@ -89,6 +89,32 @@
             android:text="Object Activity"
             android:id="@+id/btn_object_activity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result Activity"
+            android:id="@+id/btn_result_activity"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="data dari ResultActivity"
+            android:layout_gravity="center"
+            android:id="@+id/tv_data_from_result"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dial Phone"
+            android:id="@+id/btn_to_dial_phone"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sms"
+            android:id="@+id/btn_to_sms"/>
+
     </LinearLayout>
 
 </ScrollView>

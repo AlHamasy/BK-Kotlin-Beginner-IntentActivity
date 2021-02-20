@@ -1,6 +1,7 @@
 package id.asad.intentactivity
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -49,7 +50,45 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this@MainActivity, ObjectActivity::class.java)
             intent.putExtra("MOBIL", mobil)
             startActivity(intent)
+        }
 
+
+        btn_result_activity.setOnClickListener {
+
+            val intent = Intent(this@MainActivity, ResultActivity::class.java)
+            startActivityForResult(intent, 100)
+        }
+
+        btn_to_dial_phone.setOnClickListener {
+
+            val telp = "01234566789"
+
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:$telp")
+            startActivity(intent)
+        }
+
+        btn_to_sms.setOnClickListener {
+
+            val telp = "01234566789"
+            val text = "Halo, ada yang bisa dibantu?"
+
+            val intent = Intent(Intent.ACTION_SENDTO)
+            intent.data = Uri.parse("sms:$telp")
+            intent.putExtra("sms_body", text)
+            startActivity(intent)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 100){
+            if(resultCode == 200){
+
+                val data = data?.getStringExtra("RESULT")
+                tv_data_from_result.text = data
+            }
         }
     }
 }
@@ -58,3 +97,7 @@ class MainActivity : AppCompatActivity(){
 
 // pengirim = key & value
 // penerima = key u/ value
+
+// Intent
+// Intent Explicit -> jelas tujuannya
+// Intent Implicit -> belum jelas tujuannya
